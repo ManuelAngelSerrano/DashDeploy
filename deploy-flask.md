@@ -1,4 +1,4 @@
-# Deploy una apliación Flask en Ubuntu
+# Deploy una aplicación Flask en Ubuntu
 ## Instalación de aplicaciones
 1. sudo apt install python3 python3-dev
 2. sudo apt install python3-pip
