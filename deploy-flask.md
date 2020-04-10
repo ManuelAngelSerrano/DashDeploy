@@ -8,20 +8,20 @@
 6. sudo pip3 install dash-bootstrap-components
 
 ## Configuracion del sitio web
-**Nota:**<<nombreApp>>==basic
+**Nota:** *NombreApp*=basic
 
-1. Crear /var/www/<<nombreApp>>
-2. sudo chown -R $USER:$USER /var/www/<<nombreApp>>
+1. Crear /var/www/basic
+2. sudo chown -R $USER:$USER /var/www/basic
 3. sudo chmod 755 /var/www
 4. crear un virtualenv e instalar las librerias de dash
 ```sh
-python3 -m venv /var/www/<<nombreApp>>/venv
-source /var/www/<<nombreApp>>/venv/bin/activate
+python3 -m venv /var/www/basic/venv
+source /var/www/basic/venv/bin/activate
 pip3 install dash dash-bootstrap-components
 deactivate
 ```
 
-5. Crear /var/www/<<nombreApp>>/<<nombreApp>>.wsgi
+5. Crear /var/www/basic/basic.wsgi
 6. poner en el archivo .wsgi:
 ```python
 #! /usr/bin/python3
@@ -31,7 +31,7 @@ sys.path.insert(0, "/var/www/basic/")
 
 from basic import server as application
 ```
-6. copiar aplicacion a /var/www/<<nombreApp>>
+6. copiar aplicacion a /var/www/basic
 **Nota: Hay que añadir:** 
 ```python
 server = app.server
@@ -120,7 +120,7 @@ app.layout = html.Div([navbar, body])
 #    app.run_server()
 ```
 7. touch /var/www/basic/__init__.py
-8. sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/<<nombreApp>>.conf
+8. sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/basic.conf
 ~~~
 <VirtualHost *:80>
 
