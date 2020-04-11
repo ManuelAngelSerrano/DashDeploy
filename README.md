@@ -155,5 +155,5 @@ sudo a2dissite 000-default.conf
 ~~~
 12. reiniciar el servidor apache: 
 ~~~
-sudo systemctl restart apach2.service
+sudo systemctl restart apache2.service
 ~~~
