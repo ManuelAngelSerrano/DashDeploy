@@ -160,5 +160,5 @@
     ~~~
 13. reiniciar el servidor apache: 
     ~~~
-    sudo systemctl restart apach2.service
+    sudo systemctl restart apache2.service
     ~~~
